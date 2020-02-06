@@ -176,15 +176,21 @@ rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,20 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true \
+persist.rcs.supported=1 \
+persist.vendor.ims.disableUserAgent=0 \
+persist.radio.calls.on.ims=1
 service.qti.ims.enabled=1
 
-# RCS and IMS
+# Radio Options
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.rcs.supported=0 \
-    persist.vendor.ims.disableUserAgent=0 \
-    persist.radio.calls.on.ims=1
+    persist.radio.rat_on=combine \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.radio.data_con_rprt=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.volte.dan_support=true \
+    persist.data.iwlan=1 \
+    persist.data.iwlan.ipsec.ap=1 \
+    persist.sys.cust.lte_config=true
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
