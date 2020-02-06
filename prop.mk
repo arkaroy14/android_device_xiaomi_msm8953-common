@@ -178,6 +178,14 @@ ro.telephony.default_network=22,20 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true \
 service.qti.ims.enabled=1
 
+# RCS and IMS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.rcs.supported=0 \
+    persist.vendor.ims.disableUserAgent=0 \
+    persist.radio.calls.on.ims=1
+
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.timed.enable=true
