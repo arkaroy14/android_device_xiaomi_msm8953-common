@@ -106,6 +106,13 @@ drm.service.enabled=true
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.qfp=false
 
+# Data modules
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+persist.data.mode=concurrent
+persist.data.iwlan.enable=true
+
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false
@@ -145,12 +152,6 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Netmgrd
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.use_data_netmgrd=true \
-persist.data.netmgrd.qos.enable=true \
-persist.vendor.data.mode=concurrent
-
 # Nitz
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.rild.nitz_plmn="" \
@@ -182,7 +183,8 @@ ro.telephony.default_network=22,20 \
 persist.sys.fflag.override.settings_network_and_internet_v2=true \
 persist.rcs.supported=1 \
 persist.vendor.ims.disableUserAgent=0 \
-persist.radio.calls.on.ims=1
+persist.radio.calls.on.ims=1 \
+persist.dbg.ims_volte_enable=1 \
 service.qti.ims.enabled=1
 
 # Radio Options
@@ -195,6 +197,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan=1 \
     persist.data.iwlan.ipsec.ap=1 \
     persist.sys.cust.lte_config=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.iwlan_operation_mode=legacy
+    persist.vendor.data.iwlan.enable=true
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
