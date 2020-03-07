@@ -141,13 +141,9 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml
 
-# Doze mode
+# Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiDoze
-
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
+    Dirac
 
 # DRM
 PRODUCT_PACKAGES += \
