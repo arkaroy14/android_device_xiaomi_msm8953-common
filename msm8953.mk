@@ -315,8 +315,7 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
     libxml2 \
-    telephony-ext \
-    ims-ext-common_system
+    telephony-ext
 
 #Telephony
 PRODUCT_PACKAGES += \
@@ -396,5 +395,4 @@ PRODUCT_COPY_FILES += \
 
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
-    WfdCommon \
-    ims-ext-common_system
+    WfdCommon
